@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
 
         // Step 1: Populate array
         val numberArray = IntArray(100)
+        for (n in 0..numberArray.size-1) {
+            numberArray.set(n,n+1)
+        }
 
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList())
 
@@ -28,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-
+//                displayTextView()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
